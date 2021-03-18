@@ -1,0 +1,102 @@
+@import '../styles';
+$mainShow: 0px 0px 20px 3px rgb(0 0 0 / 10%);
+.container {
+    max-width: 380px;
+    width: 100%;
+    padding-top: 80px;
+    padding-bottom: 40px;
+    margin: 0 auto;
+    text-align: center;
+    .avatar {
+        width: 154px;
+        height: auto;
+        margin: 0 auto;
+        display: block;
+        border-radius: 20%;
+        box-shadow: $mainShow;
+    }
+    h1 {
+        font-family: 'Montserrat';
+        font-variant: small-caps;;
+        font-weight: 500;
+        font-size: 28px;
+        margin-bottom: 13px;
+    }
+    p {
+        font-size: 19px;
+        font-weight: 200;
+        margin-top: 1px;
+        margin-bottom: 1px;
+        color: rgb(18, 9, 82);
+        font-family: 'Montserrat';
+        .emoji {
+            font-size: 25px;
+        }
+    }
+    .botones{
+        background-color: $bgWhite;
+        padding: 16px;
+        box-shadow: $mainShow;
+        margin: 20px;
+        display: flex;
+        text-decoration: none;
+        color: $bgBlack;
+        transition: all .3s ease;
+        fa-icon {
+            font-size: 60px;
+        }
+        .left-item {
+            width: 40%;
+        }
+        .right-item {
+            width: 60%;
+            display: grid;
+            place-items: center flex-start;
+            p {
+                text-align: left;
+            }
+        }
+        &:hover {
+            color: $bgGrey;
+        }
+    }
+}
+
+.btn-up {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    border: 0px;
+    padding: 8px 24px;
+    background: $bgWhite;
+    border-radius: 22px;
+    transition: all .3s ease;
+    fa-icon {
+        font-size: 24px;
+    }
+    &:hover {
+        background-color: $bgBlack;
+        color: $bgWhite;
+    }
+}
+
+::ng-deep body.night {
+    background-color: $bgBlack;
+    transition: all .3s ease;
+
+    .container {
+         color: $bgWhite;
+         p{
+           color:white !important;
+         }
+         .botones{
+             background-color: $bgDarkBlue !important;
+             color: $bgWhite !important;
+         }
+         .btn-up {
+             color: $bgWhite !important;
+             background-color: $bgDarkBlue !important;
+         }
+     }
+}
+

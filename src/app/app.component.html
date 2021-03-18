@@ -1,0 +1,21 @@
+<div class="container">
+    <img class="avatar" src="assets/img/PhotoLab_Ella_R_20210220_121712.png" alt="andrey marin">
+    <h1>Alena Tsitukhina</h1>
+
+    <p>Hello, I´m a FullStack developer <span class="emoji">👨‍💻</span></p>
+    <p>Visit my oficial links</p>
+
+    <a *ngFor="let network of socialNetworks" class="botones" href="{{network.link}}">
+        <div class="left-item">
+            <fa-icon [icon]="network.image"></fa-icon>
+        </div>
+        <div class="right-item">
+            <p>{{network.title}}</p>
+        </div>
+    </a>
+
+    <button type="button" class="btn-up" (click)="nightMode()">
+      <fa-icon *ngIf="!isNightMode" [icon]="moon"></fa-icon>
+      <fa-icon *ngIf="isNightMode" [icon]="sun"></fa-icon>
+    </button>
+</div>
